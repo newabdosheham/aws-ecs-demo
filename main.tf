@@ -192,8 +192,8 @@ resource "aws_ecs_cluster_capacity_providers" "main" {
 
 # --- ECR ---
 
-resource "aws_ecr_repository" "app" {
-  name                 = "demo-app"
+*/resource "aws_ecr_repository" "app" {
+ name                 = "demo-app"
   image_tag_mutability = "MUTABLE"
   force_delete         = true
 
@@ -204,7 +204,7 @@ resource "aws_ecr_repository" "app" {
 
 output "demo_app_repo_url" {
   value = aws_ecr_repository.app.repository_url
-}
+}/*
 
 
 # --- ECS Task Role ---
@@ -258,7 +258,7 @@ resource "aws_ecs_task_definition" "app" {
 
   container_definitions = jsonencode([{
     name         = "app",
-    image        = "${aws_ecr_repository.app.repository_url}:latest",
+    image        = "130229496963.dkr.ecr.us-east-1.amazonaws.com/demo-app:latest",
     essential    = true,
     portMappings = [{ containerPort = 80, hostPort = 80 }],
 
