@@ -3,29 +3,6 @@ In this project we will deploy a simple docker web page image that redirect to y
 Step 1: Create the HTML Page
 Create a file named index.html:
 --------------------------------------------------
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to LinkedIn</title>
-    <meta http-equiv="refresh" content="5;url=https://www.linkedin.com/in/your-linkedin-profile/" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #0077B5;
-        }
-    </style>
-</head>
-<body>
-    <h1>Redirecting to My LinkedIn Profile</h1>
-    <p>If you are not redirected automatically, click <a href="https://www.linkedin.com/in/your-linkedin-profile/">here</a>.</p>
-</body>
-</html>
 
 ---------------------------------------------------------------------------------
 Step 2: Create the Dockerfile
