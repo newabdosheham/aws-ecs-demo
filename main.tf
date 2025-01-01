@@ -232,7 +232,7 @@ resource "aws_cloudwatch_log_group" "ecs" {
 # --- ECS Task Definition ---
 
 resource "aws_ecs_task_definition" "app" {
-  family             = "demo-app"
+  family             = "abdo-ecr"
   task_role_arn      = aws_iam_role.ecs_task_role.arn
   execution_role_arn = aws_iam_role.ecs_exec_role.arn
   network_mode       = "awsvpc"
@@ -241,7 +241,7 @@ resource "aws_ecs_task_definition" "app" {
 
   container_definitions = jsonencode([{
     name         = "app",
-    image        = "130229496963.dkr.ecr.us-east-1.amazonaws.com/demo-app:latest",
+    image        = "130229496963.dkr.ecr.us-east-1.amazonaws.com/abdo-ecr:latest",
     essential    = true,
     portMappings = [{ containerPort = 80, hostPort = 80 }],
 
