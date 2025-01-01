@@ -133,7 +133,7 @@ resource "aws_launch_template" "ecs_ec2" {
 # --- ECS ASG ---
 
 resource "aws_autoscaling_group" "ecs" {
-  name_prefix               = "demo-ecs-asg-"
+  name_prefix               = "my-demo-ecs-asg-"
   vpc_zone_identifier       = aws_subnet.public[*].id
   min_size                  = 2
   max_size                  = 8
