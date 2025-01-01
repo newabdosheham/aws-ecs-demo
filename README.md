@@ -34,13 +34,13 @@ You should see the HTML page redirecting you to your LinkedIn profile after 5 se
 -------------------------------------------------------------------------------------------
 Step 5: Push the Image to ECR
 
-    Tag the Image
+Tag the Image
 
-docker tag linkedin-redirect:latest <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/linkedin-redirect:latest
+    docker tag linkedin-redirect:latest <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/linkedin-redirect:latest
 
 Authenticate Docker with ECR
 
-aws ecr get-login-password --region <AWS_REGION> | docker login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com
+    aws ecr get-login-password --region <AWS_REGION> | docker login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com
 
 Push the Image to ECR
 
