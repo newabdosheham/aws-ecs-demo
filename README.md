@@ -7,24 +7,24 @@ Create a file named index.html:
 ---------------------------------------------------------------------------------
 Step 2: Create the Dockerfile
 
-Create a file named Dockerfile:
+step 3: Create a file named Dockerfile:
 
 
 ---------------------------------------------------------------------------------------------
-Step 3: Build and Run the Docker Image
-3.1 Build the Docker Image
+Step 4: Build and Run the Docker Image
+4.1 Build the Docker Image
 
 Run the following command to build the Docker image:
 
 docker build -t linkedin-redirect .
 
-3.2 Run the Docker Container
+4.2 Run the Docker Container
 
 Run the container locally to test it:
 
 docker run -d -p 8080:80 linkedin-redirect
 
-3.3 Test the Redirection
+4.3 Test the Redirection
 
 Open your browser and navigate to:
 
@@ -32,7 +32,7 @@ http://localhost:8080
 
 You should see the HTML page redirecting you to your LinkedIn profile after 5 seconds.
 -------------------------------------------------------------------------------------------
-Step 4: Push the Image to ECR
+Step 5: Push the Image to ECR
 
     Tag the Image
 
@@ -48,7 +48,7 @@ Push the Image to ECR
 
 ------------------------------------------------------
 
-Step 5: Deploy to ECS
+Step 6: Deploy to ECS
 
 Update your ECS Task Definition to use the new image in the main.tf:
 
