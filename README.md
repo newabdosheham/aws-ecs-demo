@@ -1,3 +1,19 @@
+Task 1: Create a new GitHub repository
+You will need a free GitHub.com account for this lab. We recommend using a personal account thatwas
+configured in previous labs. You can sign up or login in to an existing account at https://github.com/
+Login to github and create a new repository by navigating to https://github.com/new
+Use the following settings for the code repository
+• Name: “my-app”
+• Description: My AWS Application
+• Private repo
+Once created, connect the the repository to your local machine.
+git init
+git remote add origin https://github.com/<YOUR_GIT_HUB_ACCOUNT>/my-app.git
+
+
+------------------------------------------------------------------------
+
+
 In this project we will deploy a simple docker web page image that redirect to your linkedin account using Elastic Kurernates Cluster. Here are the steps:
 
 Step 1: Create the HTML Page
